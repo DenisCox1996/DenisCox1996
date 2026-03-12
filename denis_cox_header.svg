@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF3B30;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FF9500;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#34C759;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#007AFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AF52DE;stop-opacity:1" />
+    </linearGradient>
+
+    <style>
+      .hand-main { fill: #ECF0F1; stroke: #BDC3C7; stroke-width: 1; }
+      .hand-accent { fill: #007AFF; }
+      .glowing-ring { fill: none; stroke: #00FFFF; stroke-width: 4; filter: url(#glow); animation: pulse_ring 2s infinite ease-in-out; }
+
+      @keyframes pulse_ring {
+        0%, 100% { stroke-opacity: 0.5; stroke-width: 3; }
+        50% { stroke-opacity: 1; stroke-width: 5; }
+      }
+
+      .letter { font-family: 'Fira Code', 'Courier New', monospace; font-weight: 800; font-size: 55px; fill: url(#textGradient); animation: bounce 2s infinite ease-in-out; }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-20px); }
+        60% { transform: translateY(-10px); }
+      }
+
+      /* Individuelle Verzögerungen für den "Wellen"-Effekt */
+      .c1 { animation-delay: 0.0s; } .c2 { animation-delay: 0.1s; } .c3 { animation-delay: 0.2s; }
+      .c4 { animation-delay: 0.3s; } .c5 { animation-delay: 0.4s; } .c6 { animation-delay: 0.6s; }
+      .c7 { animation-delay: 0.7s; } .c8 { animation-delay: 0.8s; }
+
+      /* Animation für die Hände */
+      @keyframes embrace {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-5px); }
+      }
+      .hand-left { animation: embrace 3s infinite ease-in-out; }
+      @keyframes embrace_right {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(5px); }
+      }
+      .hand-right { animation: embrace_right 3s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <circle class="glowing-ring" cx="400" cy="80" r="50" />
+
+  <g class="hand-left" transform="translate(10, 20) scale(0.6)">
+    <path class="hand-main" d="M100 100 Q80 120 70 140 Q60 160 80 170 Q100 180 120 170 Q140 160 130 140 Q120 120 100 100 z" />
+    <path class="hand-main" d="M120 140 Q130 150 140 140 L160 110 Q170 100 160 90 L140 110 z" />
+    <path class="hand-accent" d="M85 145 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 z" />
+    <path class="hand-accent" d="M115 135 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 z" />
+  </g>
+
+  <g class="hand-right" transform="translate(790, 20) scale(-0.6, 0.6)">
+    <path class="hand-main" d="M100 100 Q80 120 70 140 Q60 160 80 170 Q100 180 120 170 Q140 160 130 140 Q120 120 100 100 z" />
+    <path class="hand-main" d="M120 140 Q130 150 140 140 L160 110 Q170 100 160 90 L140 110 z" />
+    <path class="hand-accent" d="M85 145 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 z" />
+    <path class="hand-accent" d="M115 135 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 z" />
+  </g>
+
+  <g transform="translate(260, 160)">
+    <text class="letter c1" x="0">D</text>
+    <text class="letter c2" x="35">e</text>
+    <text class="letter c3" x="70">n</text>
+    <text class="letter c4" x="105">i</text>
+    <text class="letter c5" x="140">s</text>
+    <text class="letter c6" x="210">C</text>
+    <text class="letter c7" x="245">o</text>
+    <text class="letter c8" x="280">x</text>
+  </g>
+
+</svg>
