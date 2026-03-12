@@ -1,8 +1,7 @@
 <div align="center">
-  <img src="./mein-avatar.gif" alt="Animierter Avatar" width="200" />
-</div>
-
-<div align="center">
-  <img src="./name-animation.svg" alt="Denis Cox Animiert" />
+  <img src="./mein-avatar.gif" alt="Animierter Avatar" width="180" />
+  
   <br>
+  
+  <img src="./name-animation.svg" alt="Denis Cox Animiert" />
 </div>
