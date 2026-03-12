@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="150" viewBox="0 0 800 150">
+  <style>
+    .letter {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-weight: 800;
+      font-size: 55px;
+      animation: bounce 2s infinite ease-in-out;
+    }
+    
+    /* Die Spring-Animation */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
+
+    /* Verschiedene Farben und Verzögerungen für den "Wellen"-Effekt */
+    .c1 { fill: #FF3B30; animation-delay: 0.0s; } /* Rot */
+    .c2 { fill: #FF9500; animation-delay: 0.1s; } /* Orange */
+    .c3 { fill: #FFCC00; animation-delay: 0.2s; } /* Gelb */
+    .c4 { fill: #34C759; animation-delay: 0.3s; } /* Grün */
+    .c5 { fill: #00C7BE; animation-delay: 0.4s; } /* Türkis */
+    
+    .c6 { fill: #007AFF; animation-delay: 0.6s; } /* Blau */
+    .c7 { fill: #5856D6; animation-delay: 0.7s; } /* Lila */
+    .c8 { fill: #AF52DE; animation-delay: 0.8s; } /* Pink */
+  </style>
+  
+  <g transform="translate(230, 90)">
+    <text class="letter c1" x="0">D</text>
+    <text class="letter c2" x="40">e</text>
+    <text class="letter c3" x="80">n</text>
+    <text class="letter c4" x="120">i</text>
+    <text class="letter c5" x="160">s</text>
+    
+    <text class="letter c6" x="240">C</text>
+    <text class="letter c7" x="280">o</text>
+    <text class="letter c8" x="320">x</text>
+  </g>
+</svg>
